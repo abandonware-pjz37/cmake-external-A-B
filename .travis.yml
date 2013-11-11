@@ -1,0 +1,14 @@
+language:
+    - cpp
+
+compiler:
+    - gcc
+    
+script:
+    - export INSTALL_PREFIX=`pwd`/Install
+    - export EXAMPLE_A_ROOT=${INSTALL_PREFIX}
+    - mkdir _builds
+    - cd _builds
+    - cmake ..
+    - cmake --build .
+    - ls -la ${INSTALL_PREFIX}
